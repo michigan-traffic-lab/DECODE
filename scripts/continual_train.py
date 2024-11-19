@@ -14,6 +14,7 @@ import os
 from pathlib import Path
 from datetime import datetime, timedelta
 
+# see the definition of the config.yaml file in the configs directory to modify the default values
 @hydra.main(version_base=None, config_path="../configs", config_name="config")
 def train(cfg):
     set_seed(cfg.seed)

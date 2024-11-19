@@ -1,9 +1,9 @@
 num_domains: 2 # number of tasks
 training_domain_id: 2 # training domain id
-train_data_path: [ "../data/inD/training_converted_new" ]
-val_data_path: [ "../data/rounD/validation_converted", "../data/highD/validation_converted", "../data/inD/validation_converted"]
-last_domain_model_path: "../DomainExpansionResults/MTR/reset_test_highD/240801_1011/last.ckpt"
-no_rehearsal_model_path : null
-last_ewc_model_path : null
-last_er_model_path : null
-er_buffer_data_paths: ["../data/rounD/training_converted", "../data/highD/training_converted" ]
+train_data_path: [ "./data/inD/training_converted" ]
+val_data_path: [ "./data/rounD/validation_converted", "./data/highD/validation_converted", "./data/inD/validation_converted"]
+last_domain_model_path: "./results/DECODEMTR/highD_p2.ckpt" # path to the last learning phase model for DECODE
+no_rehearsal_model_path : "./results/norehearsalMTR/highD_p2.ckpt" # path to the last learning phase model for no rehearsal
+last_ewc_model_path : "./results/ewcMTR/highD_p2.ckpt" # path to the last learning phase model for ewc
+last_er_model_path : "./results/erMTR/highD_p2.ckpt" # path to the last learning phase model for er
+er_buffer_data_paths: ["./data/rounD/training_converted", "./data/highD/training_converted" ]

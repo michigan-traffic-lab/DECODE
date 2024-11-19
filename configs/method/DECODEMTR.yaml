@@ -1,8 +1,8 @@
 # common
 model_name: MTR
 strategy_name: DECODE
-pretrained_model_path: '../DomainExpansionResults/unitraj/pretrain.ckpt'
-output_path: '../DomainExpansionResults/DECODEMTR'
+pretrained_model_path: './results/unitraj/pretrain.ckpt'
+output_path: './results/DECODEMTR'
 # model
 CONTEXT_ENCODER:
   NAME: MTREncoder
@@ -23,7 +23,7 @@ CONTEXT_ENCODER:
 MOTION_DECODER:
   NAME: MTRDecoder
   NUM_MOTION_MODES: 6
-  INTENTION_POINTS_FILE: '../domain_expansion/model/mtr/cluster_64_center_dict_6s.pkl'
+  INTENTION_POINTS_FILE: './domain_expansion/model/mtr/cluster_64_center_dict_6s.pkl'
   D_MODEL: 512
   NUM_DECODER_LAYERS: 5
   NUM_HYPER_DECODER_LAYERS: 1

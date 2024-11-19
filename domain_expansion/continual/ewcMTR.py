@@ -1,3 +1,6 @@
+# Adapted from mammoth: https://github.com/aimagelab/mammoth/tree/master
+# Licensed under the MIT License: https://opensource.org/licenses/MIT
+
 # Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
 # Published at NeurIPS 2022
 # Written by Shaoshuai Shi

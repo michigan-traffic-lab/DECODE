@@ -1,12 +1,12 @@
 # exp setting
-exp_name: 'debug'
+exp_name: 'debug' # experiment name
 ckpt_path: null # use to continual training from an intermediate epoch
-seed: 42
-debug: True
-devices: [ 0 ]
+seed: 42 # random seed
+debug: True # change this to False for full training
+devices: [ 0 ] # gpu ids
 
 # data related
-load_num_workers: 10
+load_num_workers: 10 # number of workers for data loading
 max_data_num: [ 10000000 ] # maximum number of data for each training dataset
 past_len: 21 # history trajectory length, 2.1s
 future_len: 60 # future trajectory length, 6s
@@ -22,7 +22,7 @@ overwrite_cache: False # overwrite existing cache
 store_data_in_memory: False # store data in memory
 
 # official evaluation
-nuscenes_dataroot: '/mnt/nas3_rcp_enac_u0900_vita_scratch/datasets/Prediction-Dataset/nuscenes/nuscenes_root'
+nuscenes_dataroot: '/mnt/nas3_rcp_enac_u0900_vita_scratch/datasets/Prediction-Dataset/nuscenes/nuscenes_root' # nuscenes dataset root not used
 eval_nuscenes: False # whether to evaluate with nuscenes evaluation tool
 eval_waymo: False # whether to evaluate with waymo evaluation tool
 

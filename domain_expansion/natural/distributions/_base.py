@@ -1,11 +1,14 @@
+# Adapted from natural-posterior-network: https://github.com/borchero/natural-posterior-network.git
+# Original Paper: Natural Posterior Network: Deep Bayesian Predictive Uncertainty for Exponential Family Distributions
+# Original Authors: Bertrand Charpentier, Oliver Borchert, Daniel Zügner, Simon Geisler, Stephan Günnemann
+# Link to the paper: https://arxiv.org/abs/2105.04471
+# Licensed under the MIT License: https://opensource.org/licenses/MIT
+
 from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import NamedTuple
 import torch
 from torch import nn
-'''
-copied from natural posterior network at "https://github.com/borchero/natural-posterior-network/tree/c1174b8d6d484179d42724dfe20b513fe5569aee"
-'''
 
 class PosteriorUpdate(NamedTuple):
     """

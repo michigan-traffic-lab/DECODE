@@ -8,7 +8,6 @@ from tqdm import tqdm
 from domain_expansion.hypermodel.mlp import MLP
 from domain_expansion.hypermodel.chunked_hyper_model import ChunkedHyperNetworkHandler
 from domain_expansion.hypermodel.module_wrappers import CLHyperNetInterface
-# from domain_expansion.hypermodel.hyperSMCTT import assign_weights, collect_target_shapes, flatten_dictionary
 import math 
 
 def create_flow(configs):

@@ -72,7 +72,7 @@ def preprocess_rounD_scenarios(files, worker_index):
     history_length = 105
     future_length = 300
     lane_discretization = 0.5
-    map_file = '/home/boqi/CoDriving/data/rounD/rounD_location2.lanelet.xml'
+    map_file = './data/rounD/rounD_location2.lanelet.xml'
     preprocessor = DataPreprocess(history_length, future_length, delta_frames, lane_discretization, num_points_each_polyline=21)
     lanelet_network = CommonRoadFileReader(map_file).open_lanelet_network()
     for file_path in tqdm.tqdm(files, leave=False, position=0, desc="Worker {} Number of raw file".format(worker_index)):
@@ -161,7 +161,7 @@ def preprocess_sinD_scenarios(folders, worker_index):
     history_length = 21
     future_length = 60
     lane_discretization = 0.5
-    map_file = '/home/boqi/CoDriving/data/SinD/lanelets.xml'
+    map_file = './data/SinD/lanelets.xml'
     preprocessor = DataPreprocess(history_length, future_length, delta_frames, lane_discretization, num_points_each_polyline=21)
     lanelet_network = CommonRoadFileReader(map_file).open_lanelet_network()
     for subfolder_file in tqdm.tqdm(folders, leave=False, position=0, desc="Worker {} Number of raw file".format(worker_index)):
@@ -286,7 +286,7 @@ def preprocess_inD_scenarios(files, worker_index):
     history_length = 105
     future_length = 300
     lane_discretization = 0.5
-    map_file_dir = Path('/home/boqi/CoDriving/data/inD/repaired_maps/')
+    map_file_dir = Path('./data/inD/repaired_maps/')
     preprocessor = DataPreprocess(history_length, future_length, delta_frames, lane_discretization, num_points_each_polyline=21)
     map_locations = {1: "Bendplatz", 2: "frankenberg", 3: "heckstrasse", 4: "aseag"}
     class_to_obstacleType = {"car": "car", "truck_bus": "bus", "pedestrian": "pedestrian", "bicycle": "bicycle"}
@@ -510,7 +510,7 @@ def preprocess_terasim_scenarios(files, worker_index):
     history_length = 21
     future_length = 60
     lane_discretization = 0.5
-    map_file = '/mnt/space/data/terasim/mcity_lanelet_network.xml'
+    map_file = './data/terasim/mcity_lanelet_network.xml'
     preprocessor = DataPreprocess(history_length, future_length, delta_frames, lane_discretization, num_points_each_polyline=21)
     lanelet_network = CommonRoadFileReader(map_file).open_lanelet_network()
 

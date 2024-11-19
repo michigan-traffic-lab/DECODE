@@ -1,3 +1,9 @@
+# Adapted from unitraj: https://github.com/borchero/natural-posterior-network.git
+# Original Paper: A Unified Framework for Scalable Vehicle Trajectory Prediction
+# Original Authors: Lan Feng, Mohammadhossein Bahari, Kaouther Messaoud Ben Amor, Éloi Zablocki, Matthieu Cord, and Alexandre Alahi
+# Link to the paper: https://arxiv.org/pdf/2403.15098
+# Licensed under GNU Affero General Public License v3.0: https://www.gnu.org/licenses/agpl-3.0.html
+
 # Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
 # Published at NeurIPS 2022
 # Written by Shaoshuai Shi

@@ -49,7 +49,10 @@ DECODE
 │   ├── continual_train.py
 │   ├── convert_data.py
 ├── data # [Optional] Store raw and processed data here 
-└── resutls # [Optional] Store model checkpoints here
+│   ├── rounD
+│   ├── highD
+│   └── inD
+└── results # [Optional] Store model checkpoints here
 ```
 
 ## II. Installation and Environment Configuration
@@ -74,25 +77,48 @@ pip install -r requirements.txt
 
 ## III. Dataset
 
+### Dataset download
+
+Three datasets are used in this repo: RounD, HighD, and InD. They can be dowloaded from the following websites:
+RounD: https://levelxdata.com/round-dataset
+HighD: https://levelxdata.com/highd-dataset
+InD: https://levelxdata.com/ind-dataset
+
+The downloaded datasets should be placed in the data folder according their respective subfolder names. We used a commonroad lanelet format for map description. 
+The trained models for evaluation should be placed in the results folder.
+Both data and model related materials can be found using the following link: https://d1avza5eyi8p22.cloudfront.net/DECODE/assets.zip
+
+### Data Preprocessing
+
+Once the datasets are downloaded, use the scripts in the `/scripts/data` folder to preprocess the dataset, as in the following example:
+```bash
+python ./domain_expansion/convert_data.py \
+  -n rounD \
+  -d ./data/rounD/training_converted \
+  --raw_data_path ./data/rounD/training \
+  --num_workers 6 \
+  --overwrite
+```
+
 ## IV. Usage
 
 ### Continual Train MTR model with DECODE strategy:
 #### Domain 1
 ```
-python continual_train method=DECODEMTR domain=rounD
+python ./scripts/continual_train.py method=DECODEMTR domain=rounD
 ```
 #### Domain 2
 ```
-python continual_train method=DECODEMTR domain=highD
+python ./scripts/continual_train.py method=DECODEMTR domain=highD
 ```
 #### Domain 3
 ```
-python continual_train method=DECODEMTR domain=inD
+python ./scripts/continual_train.py method=DECODEMTR domain=inD
 ```
 
 ### Evaluate trained MTR model with DECODE strategy:
 ```
-python model_evaluation method=DECODEMTR
+python ./scripts/model_evaluation.py method=DECODEMTR domain=rounD ckpt_path="./results/DECODEMTR/rounD_p1.ckpt"
 ```
 
 ## V. Main results
@@ -110,21 +136,30 @@ This project is licensed under the [GNU Affero General Public License v3.0]. Ple
 
 This project includes code and content adapted from the following sources:
 
-1. **MIT-Licensed Code**  
-   Adapted from [Project Name](<URL>).  
+1. **mammoth**  
+   Adapted from (<https://github.com/aimagelab/mammoth/tree/master>).  
    Licensed under the MIT License.  
 
-2. **CC BY-NC 4.0 Content**  
-   Adapted from *Original Work Title* by *Author Name*, available at [Original URL].  
-   Licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).  
+2. **natural-posterior-network**  
+   Adapted from (<https://github.com/borchero/natural-posterior-network.git>).  
+   Licensed under the MIT License. 
+
+3. **UniTraj**  
+   Adapted from (<https://github.com/vita-epfl/UniTraj.git>).  
+   Licensed under the GNU Affero General Public License v3.0.
+
+4. **MTR**  
+   Adapted from (<https://github.com/sshaoshuai/MTR.git>).  
+   Licensed under the Apache License v2.0.
 
 See the `NOTICE` file for more details.
 
 
-## VIII. Developers
+## IX. Developers
 
 - Boqi Li (boqili@umich.edu)
+- Rusheng Zhang (rushengz@umich.edu)
 
-## IX. Contact
+## X. Contact
 
 - Henry Liu (henryliu@umich.edu)
