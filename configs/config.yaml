@@ -1,0 +1,31 @@
+# exp setting
+exp_name: 'debug'
+ckpt_path: null # use to continual training from an intermediate epoch
+seed: 42
+debug: True
+devices: [ 0 ]
+
+# data related
+load_num_workers: 10
+max_data_num: [ 10000000 ] # maximum number of data for each training dataset
+past_len: 21 # history trajectory length, 2.1s
+future_len: 60 # future trajectory length, 6s
+object_type: [ 'VEHICLE' ] #, 'PEDESTRIAN', 'CYCLIST'] # object types included in the training set
+line_type: [ 'lane' ] #,'stop_sign','road_edge','road_line','crosswalk','speed_bump' ] # line type to be considered in the input
+masked_attributes: [ 'z_axis', 'acceleration' ] # attributes to be masked in the input
+trajectory_sample_interval: 1 # sample interval for the trajectory
+only_train_on_ego: False # only train on AV
+center_offset_of_map: [ 30.0, 0.0 ] # center offset of the map
+
+use_cache: False # use cache for data loading
+overwrite_cache: False # overwrite existing cache
+store_data_in_memory: False # store data in memory
+
+# official evaluation
+nuscenes_dataroot: '/mnt/nas3_rcp_enac_u0900_vita_scratch/datasets/Prediction-Dataset/nuscenes/nuscenes_root'
+eval_nuscenes: False # whether to evaluate with nuscenes evaluation tool
+eval_waymo: False # whether to evaluate with waymo evaluation tool
+
+defaults:
+  - method: DECODEMTR # choose a continual learning strategy. Options: [DECODEMTR, erMTR, ewcMTR, MTR, preMTR]
+  - domain: rounD # choose the learning domain. Three learning domain phases are available in the order: [rounD, highD, inD]

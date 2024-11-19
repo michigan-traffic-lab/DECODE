@@ -1,0 +1,10 @@
+Third-Party Licenses
+====================
+1. Repo A
+   - Source: https://github.com/owner/repoA
+   - Licensed under GNU Affero General Public License v3.0, https://www.gnu.org/licenses/agpl-3.0.html
+   - Repo A is based on work from Repo B.
+
+2. Repo B
+   - Source: https://github.com/owner/repoB
+   - Licensed under Apache License, Version 2.0, https://www.apache.org/licenses/LICENSE-2.0

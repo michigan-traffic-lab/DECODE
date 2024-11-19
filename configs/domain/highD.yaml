@@ -1,0 +1,9 @@
+num_domains: 1 # number of tasks
+training_domain_id: 1 # training domain id
+train_data_path: [ "../data/highD/training_converted" ]
+val_data_path:  [ "../data/rounD/validation_converted", "../data/highD/validation_converted" ]
+last_domain_model_path: "../DomainExpansionResults/MTR/reset_test_rounD/240731_2228/last.ckpt"
+no_rehearsal_model_path : null
+last_ewc_model_path : null
+last_er_model_path : null
+er_buffer_data_paths: ["../data/rounD/training_converted"]
