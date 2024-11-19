@@ -80,8 +80,11 @@ pip install -r requirements.txt
 ### Dataset download
 
 Three datasets are used in this repo: RounD, HighD, and InD. They can be dowloaded from the following websites:
+
 RounD: https://levelxdata.com/round-dataset
+
 HighD: https://levelxdata.com/highd-dataset
+
 InD: https://levelxdata.com/ind-dataset
 
 The downloaded datasets should be placed in the data folder according their respective subfolder names. We used a commonroad lanelet format for map description. 
@@ -130,7 +133,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## VII. License
 
-This project is licensed under the [GNU Affero General Public License v3.0]. Please refer to LICENSE for more details.
+This project is licensed under the GNU Affero General Public License v3.0. Please refer to LICENSE for more details.
 
 ## VIII. Third-Party Attribution
 
