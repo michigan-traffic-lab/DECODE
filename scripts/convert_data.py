@@ -65,7 +65,8 @@ if __name__ == '__main__':
         else:
             shutil.rmtree(output_path)
 
-    data_directory = os.path.join(SCENARIONET_DATASET_PATH, args.raw_data_path)
+    current_directory = os.getcwd()
+    data_directory = os.path.join(current_directory, args.raw_data_path)
     files = get_scenarios_func(data_directory, args.start_file_index, args.num_files)
 
     logger.info(

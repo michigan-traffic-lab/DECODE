@@ -95,7 +95,7 @@ Both data and model related materials can be found using the following link: htt
 
 Once the datasets are downloaded, use the scripts in the `/scripts/data` folder to preprocess the dataset, as in the following example:
 ```bash
-python ./domain_expansion/convert_data.py \
+python ./scripts/convert_data.py \
   -n rounD \
   -d ./data/rounD/training_converted \
   --raw_data_path ./data/rounD/training \

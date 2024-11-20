@@ -8,6 +8,7 @@ devices: [ 0 ] # gpu ids
 # data related
 load_num_workers: 10 # number of workers for data loading
 max_data_num: [ 10000000 ] # maximum number of data for each training dataset
+starting_frame: [ 0 ] # starting frame for each training dataset
 past_len: 21 # history trajectory length, 2.1s
 future_len: 60 # future trajectory length, 6s
 object_type: [ 'VEHICLE' ] #, 'PEDESTRIAN', 'CYCLIST'] # object types included in the training set

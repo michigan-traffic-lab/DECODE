@@ -1,8 +1,8 @@
 # common
 model_name: MTR
 strategy_name: no_rehearsal
-pretrained_model_path: '../DomainExpansionResults/unitraj/pretrain.ckpt'
-output_path: '../DomainExpansionResults/norehearsalMTR'
+pretrained_model_path: './results/unitraj/pretrain.ckpt'
+output_path: './results/norehearsalMTR'
 # model
 CONTEXT_ENCODER:
   NAME: MTREncoder

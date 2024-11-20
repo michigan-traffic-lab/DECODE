@@ -1,8 +1,8 @@
 # common
 model_name: MTR
 strategy_name: er
-pretrained_model_path: '../DomainExpansionResults/unitraj/pretrain.ckpt'
-output_path: '../DomainExpansionResults/erMTR'
+pretrained_model_path: './results/unitraj/pretrain.ckpt'
+output_path: './results/erMTR'
 # model
 CONTEXT_ENCODER:
   NAME: MTREncoder
