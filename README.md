@@ -4,7 +4,7 @@
 
 ### About
 
-Welcome to the official GitHub repository for our paper on the DECODE framework, a novel continual learning framework for motion prediction. This repository contains all the necessary code and resources to replicate the results and experiments presented in our study. It is developed by the [Michigan Traffic Lab](https://traffic.engin.umich.edu/) at the University of Michigan.
+Welcome to the official GitHub repository for our paper on the DECODE framework, a novel continual learning framework for motion prediction. The paper is available on [arXiv](https://arxiv.org/abs/2411.17917). This repository contains all the necessary code and resources to replicate the results and experiments presented in our study. It is developed by the [Michigan Traffic Lab](https://traffic.engin.umich.edu/) at the University of Michigan.
 
 ### Features
 
